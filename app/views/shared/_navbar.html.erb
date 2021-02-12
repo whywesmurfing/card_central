@@ -17,21 +17,21 @@
             <%# <a class="nav-link active" aria-current="page" href="#">Create Listing</a> %>
             <%= link_to 'Create Listing', new_listing_path, class: "nav-link active" %>
           </li>
-          <li class="nav-item">
+          <%# <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Login</a>
             <%# <%= link_to 'Create Listing', new_listing_path, class: "nav-link active" %>
-          </li>
+          </li> %>
 
           <%# Comment: Bring back once the methods have been added in %>
-          <%# <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">
               <% if user_signed_in? %>
-                <%# <%= link_to "Log Out", destroy_user_session_path, method: :destroy %> %>
-              <%# <% else %> %>
-                <%# <%= link_to "Log In", user_session_path, method: :create %> %>
-              <%# <% end %> %>
-            <%# </a>
-          </li> %> %>
+                <%= link_to "Log Out", destroy_user_session_path, method:"delete", class: "nav-link active" %>
+              <% else %>
+                <%= link_to "Log In", new_user_session_path, method: :create %>
+              <% end %>
+            </a>
+          </li>
 
         </ul>
         <%# Commented out Code: bring this back when search has been implemented %>
