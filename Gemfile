@@ -53,3 +53,6 @@ gem 'bootstrap', '~> 4.6.0'
 
 # add jquery-rails to the application
 gem 'jquery-rails'
+
+# devise gem for authentication
+gem 'devise'
