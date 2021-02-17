@@ -4,7 +4,7 @@ RSpec.describe "listings/edit", type: :view do
   before(:each) do
     new_user = User.new(
       name: "Raymond Doan",
-      email: "email@address.com",
+      email: "test1@address.com",
       password: "qwe123"
     )
     new_user.save!
