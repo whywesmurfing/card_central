@@ -23,6 +23,7 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
     @listing.user = current_user # adds in the user into listing
+    @listing.photo.attach(params[:listing][:photo])
 
     respond_to do |format|
       if @listing.save
@@ -65,6 +66,6 @@ class ListingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def listing_params
-      params.require(:listing).permit(:title, :description, :price, :sold, :user)
+      params.require(:listing).permit(:title, :description, :price, :sold, :user, :photo)
     end
 end
