@@ -60,3 +60,6 @@ gem 'devise'
 # add cloudinary gems for image uploading
 gem 'cloudinary'
 gem 'activestorage-cloudinary-service'
+
+# add stripe gem for payments
+gem 'stripe'
